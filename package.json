@@ -2,9 +2,8 @@
   "name": "ame",
   "version": "1.0.0",
   "description": "Projeto Postman",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api-test": "ame.postman_collection.json -e variable.postman_environment.json"
   },
   "repository": {
     "type": "git",
