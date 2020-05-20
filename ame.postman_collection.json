@@ -36,7 +36,7 @@
 							"",
 							"",
 							"",
-							"pm.test(\"Successful POST request\", function () {",
+							"pm.test(\"Requisição de Sucesso Post\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
 							"});",
 							"",
@@ -371,7 +371,7 @@
 					"script": {
 						"id": "9516cb0d-a818-4800-a723-d69b724838f3",
 						"exec": [
-							""
+							"console.log(\"Retorna Lista de Empregados\")"
 						],
 						"type": "text/javascript"
 					}
@@ -400,16 +400,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://dummy.restapiexample.com/api/v1/employees",
-					"protocol": "http",
+					"raw": "{{url}}/employees",
 					"host": [
-						"dummy",
-						"restapiexample",
-						"com"
+						"{{url}}"
 					],
 					"path": [
-						"api",
-						"v1",
 						"employees"
 					]
 				}
@@ -444,7 +439,7 @@
 					"script": {
 						"id": "a70dbbf7-2866-42e6-b05e-c1a92e512d18",
 						"exec": [
-							"console.log(\"Altera Nome do usuário cadastrado, retorna através do id\")"
+							"console.log(\"Altera Nome do empregado cadastrado, através do id\")"
 						],
 						"type": "text/javascript"
 					}
@@ -492,76 +487,6 @@
 			"response": []
 		},
 		{
-			"name": "employee2",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "f3453bf6-69f2-4b4f-b9d0-1a3bef728f1c",
-						"exec": [
-							"pm.test(\"Tempo de Resposta 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(200);",
-							"});",
-							"",
-							"pm.test(\"Contém ID do usuário correspondente \", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"{{id}}\");",
-							"});",
-							"",
-							"",
-							"pm.test(\"Requisição GET com sucesso\", function () {",
-							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
-							"});",
-							"",
-							"",
-							""
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "7ece855b-928c-43c6-897c-eb122de2eb52",
-						"exec": [
-							"console.log(\"Validar Alteração do Nome do usuário\")"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/javascript",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/gzip",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{url}}/employee/{{id}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"employee",
-						"{{id}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Delete",
 			"event": [
 				{
@@ -593,7 +518,7 @@
 					"script": {
 						"id": "13b5c069-232a-492d-bab4-42940ecfa764",
 						"exec": [
-							"console.log(\"Deleta usuário Cadastradoo\")"
+							"console.log(\"Deleta empregado Cadastradoo\")"
 						],
 						"type": "text/javascript"
 					}
