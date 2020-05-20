@@ -27,7 +27,7 @@
 							"value = bodyData.data.id",
 							"console.log(value)",
 							"pm.environment.set(\"id\", value);",
-							"",
+							"pm.globals.set(\"ids\", value);",
 							"",
 							"pm.test(\"Mensagem de Sucesso\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"success\");",
