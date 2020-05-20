@@ -1,0 +1,679 @@
+{
+	"info": {
+		"_postman_id": "44a0503b-5bc3-4661-941e-b225e126516e",
+		"name": "ame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "39916136-657e-40da-8edb-0874007ba9c9",
+						"exec": [
+							"console.log(\"Criar um empregado\")"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fd9a4e6b-adad-4563-922b-b4f37045c3e1",
+						"exec": [
+							"bodyData = JSON.parse(responseBody)",
+							"value = bodyData.data.id",
+							"console.log(value)",
+							"pm.environment.set(\"id\", value);",
+							"",
+							"",
+							"pm.test(\"Mensagem de Sucesso\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"success\");",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/gzip",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n         \r\n        \"name\": \"{{nome}}\",\r\n        \"salary\": \"103600\",\r\n        \"age\": \"23\"\r\n    \r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/javascript",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/gzip",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n         \r\n        \"name\": \"{{nome}}\",\r\n        \"salary\": \"123\",\r\n        \"age\": \"23\"\r\n    \r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Type, X-Requested-With, X-authentication, X-client"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 May 2020 15:04:15 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"key": "Host-Header",
+							"value": "c2hhcmVkLmJsdWVob3N0LmNvbQ=="
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": ""
+						},
+						{
+							"key": "Response",
+							"value": "200"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.16.0"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ezoab_133674=mod1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ezoadgid_133674=-1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ezoref_133674=; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 17:04:14 UTC"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "active_template::133674=pub_site.1589900654; Path=/; Domain=restapiexample.com; Expires=Thu, 21 May 2020 15:04:14 UTC"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding,X-APP-JSON"
+						},
+						{
+							"key": "X-Middleton-Response",
+							"value": "200"
+						},
+						{
+							"key": "X-Sol",
+							"value": "pub_site"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Andre Luiz\",\n        \"salary\": \"123\",\n        \"age\": \"23\",\n        \"id\": 76\n    }\n}"
+				},
+				{
+					"name": "Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/javascript",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/gzip",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n         \r\n        \"name\": \"{{nome}}\",\r\n        \"salary\": \"123\",\r\n        \"age\": \"23\"\r\n    \r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Content-Type, X-Requested-With, X-authentication, X-client"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 May 2020 15:04:15 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"key": "Host-Header",
+							"value": "c2hhcmVkLmJsdWVob3N0LmNvbQ=="
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": ""
+						},
+						{
+							"key": "Response",
+							"value": "200"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.16.0"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ezoab_133674=mod1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ezoadgid_133674=-1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "ezoref_133674=; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 17:04:14 UTC"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "active_template::133674=pub_site.1589900654; Path=/; Domain=restapiexample.com; Expires=Thu, 21 May 2020 15:04:14 UTC"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding,X-APP-JSON"
+						},
+						{
+							"key": "X-Middleton-Response",
+							"value": "200"
+						},
+						{
+							"key": "X-Sol",
+							"value": "pub_site"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Andre Luiz\",\n        \"salary\": \"123\",\n        \"age\": \"23\",\n        \"id\": 76\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "employee1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f3453bf6-69f2-4b4f-b9d0-1a3bef728f1c",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+							"tests[\"Body contains status\"] = responseBody.has(\"status\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9516cb0d-a818-4800-a723-d69b724838f3",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/gzip",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/employees",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d725de9-24a1-4a8e-be8f-b27c89f05ec1",
+						"exec": [
+							"var responseJSON;\r",
+							"\r",
+							"try {\r",
+							"    responseJSON = JSON.parse(responseBody);\r",
+							"    tests['response is valid JSON'] = true;\r",
+							"}\r",
+							"catch (e) {\r",
+							"    responseJSON = {};\r",
+							"    tests['response is valid JSON'] = false;\r",
+							"}\r",
+							"tests['response has PUT data'] = _.has(responseJSON, 'data');"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a70dbbf7-2866-42e6-b05e-c1a92e512d18",
+						"exec": [
+							"console.log(\"Altera Nome do usuário cadastrado, retorna através do id\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/gzip",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " \t{\n \t\t\"name\":\"{{nome2}}\",\n\t\t\"salary\":\"1123\",\n\t\t\"age\":\"23\"\n \t\t\n \t}"
+				},
+				"url": {
+					"raw": "{{url}}/update/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"update",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f3453bf6-69f2-4b4f-b9d0-1a3bef728f1c",
+						"exec": [
+							"pm.test(\"Tempo de Resposta 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Contém ID do usuário correspondente \", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"{{id}}\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Requisição GET com sucesso\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7ece855b-928c-43c6-897c-eb122de2eb52",
+						"exec": [
+							"console.log(\"Validar Alteração do Nome do usuário\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/gzip",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/employee/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"employee",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a77c940d-3bc1-4cb9-a18d-f7a2015c56b5",
+						"exec": [
+							"",
+							"pm.test(\"Mensagem de Sucesso\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"successfully! deleted Records\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "13b5c069-232a-492d-bab4-42940ecfa764",
+						"exec": [
+							"console.log(\"Deleta usuário Cadastradoo\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/gzip",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}/delete/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"delete",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7271c130-40bc-4716-b883-5a5612ed0cae",
+				"type": "text/javascript",
+				"exec": [
+					"pm.sendRequest({",
+					"    url: pm.environment.get(\"local\"),",
+					"    method: 'POST',",
+					"    header: {",
+					"        'content-type': 'application/json'",
+					"    },",
+					"    body: {",
+					"        mode: 'raw',",
+					"        raw: JSON.stringify({ ",
+					"            email: pm.environment.get(\"usuario\"), ",
+					"            password: pm.environment.get(\"senha\") })",
+					"    }",
+					"}, function (err, res) {",
+					"    pm.environment.set(\"auth\");",
+					"});",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f82ab155-c6de-4486-997c-9e470f71d76e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
