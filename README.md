@@ -3,9 +3,9 @@
 
 ## Características: 
   	-  Criar um projeto de automação utilizando a API pública 
-	  -  Criar um empregado.
+	-  Criar um empregado.
   	-  Validar se o empregado foi criado corretamente.
-	  -  Exclua esse usuário.
-	  -  Validar sempre o Status Code e a mensagem exibida.
+	-  Exclua esse usuário.
+	-  Validar sempre o Status Code e a mensagem exibida.
    	-  Gerar relatório dos testes executados.
 	
