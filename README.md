@@ -23,3 +23,4 @@
 ## Rodar os Testes via Newman 
 
 	Exemplo: 
+	newman run ame.postman_collection.json -e variable.postman_environment.json --reporters=cli,htmlextra
