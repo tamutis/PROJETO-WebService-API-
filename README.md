@@ -15,4 +15,5 @@
 	Objetivo:
 	É um comando de linha utilizado para rodar as collection do Postman. A partir deste comando é possível inserir iterações,gerar relatórios em html, json etc.. 
 
-![Capturar](https://user-images.githubusercontent.com/20347604/82456110-2c712b80-9a8a-11ea-99ed-efe0e3f4a339.PNG)
+
+	![Capturar](https://user-images.githubusercontent.com/20347604/82456110-2c712b80-9a8a-11ea-99ed-efe0e3f4a339.PNG)
