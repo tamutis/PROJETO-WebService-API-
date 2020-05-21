@@ -2,20 +2,14 @@
   "name": "ame",
   "version": "1.0.0",
   "description": "Projeto Postman",
+  "directories":{
+    "test":"test"
+  },
   "scripts": {
     "api-test": "ame.postman_collection.json -e variable.postman_environment.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tamutis/PROJETO-WebService-API-.git"
-  },
   "author": "André Luiz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tamutis/PROJETO-WebService-API-/issues"
-  },
-  "homepage": "https://github.com/tamutis/PROJETO-WebService-API-#readme",
   "dependencies": {
-    "newman": "^5.0.1"
+   "newman": "^5.0.1"
   }
 }
