@@ -103,11 +103,19 @@
 					"script": {
 						"id": "f3453bf6-69f2-4b4f-b9d0-1a3bef728f1c",
 						"exec": [
+							"tests[\"Body contains status\"] = responseBody.has(\"status\");\r",
 							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"tests[\"Body contains status\"] = responseBody.has(\"status\");"
+							"\r",
+							"bodyData = JSON.parse(responseBody)\r",
+							"\r",
+							"pm.test(\"Contém id do usuário Cadastrado\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include('id');\r",
+							"});\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -117,7 +125,9 @@
 					"script": {
 						"id": "9516cb0d-a818-4800-a723-d69b724838f3",
 						"exec": [
-							"console.log(\"Retorna Lista de Empregados\")"
+							"console.log(\"Retorna Lista de Empregados\")\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -179,6 +189,10 @@
 							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Mensagem de Sucesso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"success\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -333,7 +347,7 @@
 	],
 	"variable": [
 		{
-			"id": "ffa57693-5567-4b31-aeac-8f675d235df2",
+			"id": "b45aceb7-13db-4816-817d-cc63ababba7a",
 			"key": "url",
 			"value": "http://dummy.restapiexample.com/api/v1",
 			"type": "string"
