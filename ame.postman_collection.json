@@ -79,7 +79,7 @@
 					"raw": "{\r\n         \r\n        \"name\": \"{{nome}}\",\r\n        \"salary\": \"103600\",\r\n        \"age\": \"23\"\r\n    \r\n}\r\n\r\n\r\n",
 					"options": {
 						"raw": {
-							"language": "text"
+							"language": "json"
 						}
 					}
 				},
@@ -93,266 +93,7 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"name": "Create",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/javascript",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/gzip",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n         \r\n        \"name\": \"{{nome}}\",\r\n        \"salary\": \"123\",\r\n        \"age\": \"23\"\r\n    \r\n}\r\n\r\n\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/create",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"create"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Expose-Headers",
-							"value": "Content-Type, X-Requested-With, X-authentication, X-client"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-store, no-cache, must-revalidate"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json;charset=utf-8"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 19 May 2020 15:04:15 GMT"
-						},
-						{
-							"key": "Expires",
-							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
-						},
-						{
-							"key": "Host-Header",
-							"value": "c2hhcmVkLmJsdWVob3N0LmNvbQ=="
-						},
-						{
-							"key": "Pragma",
-							"value": "no-cache"
-						},
-						{
-							"key": "Referrer-Policy",
-							"value": ""
-						},
-						{
-							"key": "Response",
-							"value": "200"
-						},
-						{
-							"key": "Server",
-							"value": "nginx/1.16.0"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "ezoab_133674=mod1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "ezoadgid_133674=-1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "ezoref_133674=; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 17:04:14 UTC"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "active_template::133674=pub_site.1589900654; Path=/; Domain=restapiexample.com; Expires=Thu, 21 May 2020 15:04:14 UTC"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding,X-APP-JSON"
-						},
-						{
-							"key": "X-Middleton-Response",
-							"value": "200"
-						},
-						{
-							"key": "X-Sol",
-							"value": "pub_site"
-						},
-						{
-							"key": "Content-Length",
-							"value": "83"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Andre Luiz\",\n        \"salary\": \"123\",\n        \"age\": \"23\",\n        \"id\": 76\n    }\n}"
-				},
-				{
-					"name": "Create",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/javascript",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/gzip",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n         \r\n        \"name\": \"{{nome}}\",\r\n        \"salary\": \"123\",\r\n        \"age\": \"23\"\r\n    \r\n}\r\n\r\n\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/create",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"create"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Expose-Headers",
-							"value": "Content-Type, X-Requested-With, X-authentication, X-client"
-						},
-						{
-							"key": "Cache-Control",
-							"value": "no-store, no-cache, must-revalidate"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json;charset=utf-8"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 19 May 2020 15:04:15 GMT"
-						},
-						{
-							"key": "Expires",
-							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
-						},
-						{
-							"key": "Host-Header",
-							"value": "c2hhcmVkLmJsdWVob3N0LmNvbQ=="
-						},
-						{
-							"key": "Pragma",
-							"value": "no-cache"
-						},
-						{
-							"key": "Referrer-Policy",
-							"value": ""
-						},
-						{
-							"key": "Response",
-							"value": "200"
-						},
-						{
-							"key": "Server",
-							"value": "nginx/1.16.0"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "ezoab_133674=mod1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "ezoadgid_133674=-1; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 15:34:14 UTC"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "ezoref_133674=; Path=/; Domain=restapiexample.com; Expires=Tue, 19 May 2020 17:04:14 UTC"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "active_template::133674=pub_site.1589900654; Path=/; Domain=restapiexample.com; Expires=Thu, 21 May 2020 15:04:14 UTC"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding,X-APP-JSON"
-						},
-						{
-							"key": "X-Middleton-Response",
-							"value": "200"
-						},
-						{
-							"key": "X-Sol",
-							"value": "pub_site"
-						},
-						{
-							"key": "Content-Length",
-							"value": "83"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Andre Luiz\",\n        \"salary\": \"123\",\n        \"age\": \"23\",\n        \"id\": 76\n    }\n}"
-				}
-			]
+			"response": []
 		},
 		{
 			"name": "employee1",
@@ -575,23 +316,6 @@
 				"id": "7271c130-40bc-4716-b883-5a5612ed0cae",
 				"type": "text/javascript",
 				"exec": [
-					"pm.sendRequest({",
-					"    url: pm.environment.get(\"local\"),",
-					"    method: 'POST',",
-					"    header: {",
-					"        'content-type': 'application/json'",
-					"    },",
-					"    body: {",
-					"        mode: 'raw',",
-					"        raw: JSON.stringify({",
-					"            email: pm.environment.get(\"usuario\"),",
-					"            password: pm.environment.get(\"senha\")",
-					"        })",
-					"    }",
-					"}, function (err, res) {",
-					"    pm.environment.set(\"auth\");",
-					"});",
-					"",
 					""
 				]
 			}
@@ -609,7 +333,7 @@
 	],
 	"variable": [
 		{
-			"id": "fa874628-fe64-42ce-826f-08885f4e5429",
+			"id": "ffa57693-5567-4b31-aeac-8f675d235df2",
 			"key": "url",
 			"value": "http://dummy.restapiexample.com/api/v1",
 			"type": "string"
