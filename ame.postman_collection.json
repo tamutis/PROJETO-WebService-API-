@@ -36,10 +36,9 @@
 							"",
 							"",
 							"",
-							"pm.test(\"Requisição de Sucesso Post\", function () {",
-							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
 							"});",
-							"",
 							"",
 							""
 						],
@@ -48,6 +47,9 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -65,6 +67,11 @@
 						"key": "Content-Type",
 						"value": "application/gzip",
 						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -72,7 +79,7 @@
 					"raw": "{\r\n         \r\n        \"name\": \"{{nome}}\",\r\n        \"salary\": \"103600\",\r\n        \"age\": \"23\"\r\n    \r\n}\r\n\r\n\r\n",
 					"options": {
 						"raw": {
-							"language": "json"
+							"language": "text"
 						}
 					}
 				},
@@ -355,12 +362,10 @@
 					"script": {
 						"id": "f3453bf6-69f2-4b4f-b9d0-1a3bef728f1c",
 						"exec": [
-							"pm.test(\"Response time is less than 200ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"\r",
-							"\r",
-							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 							"tests[\"Body contains status\"] = responseBody.has(\"status\");"
 						],
 						"type": "text/javascript"
@@ -429,7 +434,11 @@
 							"    responseJSON = {};\r",
 							"    tests['response is valid JSON'] = false;\r",
 							"}\r",
-							"tests['response has PUT data'] = _.has(responseJSON, 'data');"
+							"tests['response has PUT data'] = _.has(responseJSON, 'data');\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -504,9 +513,6 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"pm.test(\"Response time is less than 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(200);",
-							"});",
 							"",
 							""
 						],
@@ -577,9 +583,10 @@
 					"    },",
 					"    body: {",
 					"        mode: 'raw',",
-					"        raw: JSON.stringify({ ",
-					"            email: pm.environment.get(\"usuario\"), ",
-					"            password: pm.environment.get(\"senha\") })",
+					"        raw: JSON.stringify({",
+					"            email: pm.environment.get(\"usuario\"),",
+					"            password: pm.environment.get(\"senha\")",
+					"        })",
 					"    }",
 					"}, function (err, res) {",
 					"    pm.environment.set(\"auth\");",
@@ -598,6 +605,14 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "fa874628-fe64-42ce-826f-08885f4e5429",
+			"key": "url",
+			"value": "http://dummy.restapiexample.com/api/v1",
+			"type": "string"
 		}
 	],
 	"protocolProfileBehavior": {}
